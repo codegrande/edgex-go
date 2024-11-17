@@ -19,7 +19,7 @@ RUN apk update && apk add zeromq-dev libsodium-dev pkgconfig build-base
 COPY . .
 RUN make cmd/export-distro/export-distro
 
-FROM alpine:3.7
+FROM alpine:3.20.3
 # The main mirrors are giving us timeout issues on builds periodically.
 # So we can try these.
 RUN echo http://nl.alpinelinux.org/alpine/v3.7/main > /etc/apk/repositories; \
