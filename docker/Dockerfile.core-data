@@ -21,7 +21,7 @@ COPY . .
 RUN make cmd/core-data/core-data
 
 #Next image - Copy built Go binary into new workspace
-FROM alpine:3.7
+FROM alpine:3.22.1
 # The main mirrors are giving us timeout issues on builds periodically.
 # So we can try these.
 RUN echo http://nl.alpinelinux.org/alpine/v3.7/main > /etc/apk/repositories; \
